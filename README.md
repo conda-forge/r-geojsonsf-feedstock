@@ -3,7 +3,7 @@ About r-geojsonsf
 
 Home: https://github.com/SymbolixAU/geojsonsf
 
-Package license: GPL-3
+Package license: MIT
 
 Feedstock license: BSD-3-Clause
 
