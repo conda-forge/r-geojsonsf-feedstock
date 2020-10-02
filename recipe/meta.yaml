@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/geojsonsf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/geojsonsf/geojsonsf_{{ version }}.tar.gz
-  sha256: b4ae7244a477faf3dbe1faa58520127148a9e2287ee26420c13041358c9c6389
+  sha256: 42df40433bfbece5a39cd97b5bd4690b4424855241fcc3e7322ee68a3988bfbf
 
 build:
   merge_build_host: true  # [win]
@@ -33,18 +33,18 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - r-curl
+    - r-geometries
     - r-jsonify >=1.1.1
     - r-rapidjsonr >=1.2.0
-    - r-sfheaders >=0.1.0
+    - r-sfheaders >=0.2.2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
-    - r-curl
+    - r-geometries
     - r-jsonify >=1.1.1
     - r-rapidjsonr >=1.2.0
-    - r-sfheaders >=0.1.0
+    - r-sfheaders >=0.2.2
 
 test:
   commands:
@@ -53,11 +53,11 @@ test:
 
 about:
   home: https://github.com/SymbolixAU/geojsonsf
-  license: GPL-3
+  license: MIT
   summary: Converts Between GeoJSON and simple feature objects.
-  license_family: GPL3
+  license_family: MIT
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
 
 extra:
   recipe-maintainers:
