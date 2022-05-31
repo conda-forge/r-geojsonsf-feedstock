@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/geojsonsf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/geojsonsf/geojsonsf_{{ version }}.tar.gz
-  sha256: 6d13fd75028705837c920ccddc24862a24fa2a2a7c69e59fc7a14b7fbf9248ba
+  sha256: 275ca14672d982e6a95884515f49d8a0aad14f3be62ea01b675a91b0bffb46d1
 
 build:
   merge_build_host: true  # [win]
