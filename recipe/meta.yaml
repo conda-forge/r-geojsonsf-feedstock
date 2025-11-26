@@ -1,4 +1,4 @@
-{% set version = "2.0.3" %}
+{% set version = "2.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/geojsonsf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/geojsonsf/geojsonsf_{{ version }}.tar.gz
-  sha256: 275ca14672d982e6a95884515f49d8a0aad14f3be62ea01b675a91b0bffb46d1
+  sha256: 8ca055f6b47d8ab16dc4eccc8663e129a734e580fc39edac830bbd43d76abb99
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
